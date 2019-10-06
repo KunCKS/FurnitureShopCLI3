@@ -1,29 +1,7 @@
-# furnitureshopcli
+# FurnitureShop 電商網站
 
-## Project setup
-```
-npm install
-```
+> Vue 電商網站製作練習
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Demo
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<https://kuncks.github.io/FurnitureShopCLI3/#/home>
