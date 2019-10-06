@@ -1,6 +1,6 @@
 <template>
   <div class="side-nav" id="sideNav">
-    <a href="#" class="menuBtn d-md-block d-none" @click.prevent="flyoutShown" id="menuBtn">
+    <a href="#" class="menuBtn d-md-block d-none" @click.stop="flyoutShown" id="menuBtn">
       <div class="btnBar"></div>
       <div class="btnBar"></div>
       <div class="btnBar"></div>
@@ -154,7 +154,7 @@ export default {
   methods: {
     flyoutShown () {
       $('#menuBtn').toggleClass('menuBtn-shown')
-      $('#sideNav').toggleClass('shown')
+      $('#sideNav').toggleClass('show')
       // $("#menuBtnInNavBar").toggleClass("menuBtn-shown");
       // 點擊替換className達到sidebar動畫效果
     },
@@ -177,13 +177,20 @@ export default {
     }
   },
   created () {
-    this.getProductData()
+    const vm = this
+    vm.getProductData()
     // 當collapse打開時，若點擊其他區域則自動關閉
+    // 說明：這邊的設定基準是當點擊目標不是帶有特定class的dom且選單為開啟時則選單關閉，另外為防止打開sidebar flyout內容時點擊其內容造成flyout關閉
+    // 增加了當點擊dom元素 closest('.flyout') 條件不成立（父元素包含flyout）時，才執行選單關閉
+    // 最後原觀察menuBtn時會發現函式都會觸發兩次，造成flyout無法打開，這是因為冒泡事件的關係，所以在click上添加修飾符.stop來防止
     $(document).on('click', e => {
-      // console.log($(e.target).closest(".btn.btn-link.dropdown-toggle"));
-      // if(!$(e.target).closest(".btn.btn-link.dropdown-toggle").length )  也可以使用此條件來達成。
-      if (!$(e.target).is('.btn,.btn-link,.dropdown-toggle')) {
+      let collapseShown = $('.collapse').hasClass('show')
+      let sideNavShown = $('#menuBtn').hasClass('menuBtn-shown')
+      // console.log($(e.target).closest('#menuBtn').length, $(e.target).closest('.flyout').length)
+      if (!$(e.target).is('.btn,.btn-link,.dropdown-toggle') && collapseShown) {
         $('.collapse').collapse('hide')
+      } else if (!$(e.target).closest('.flyout').length && !$(e.target).is('#menuBtn') && sideNavShown) {
+        vm.flyoutShown()
       }
     })
   }

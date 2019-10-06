@@ -176,7 +176,7 @@ export default {
     },
     flyoutShown () {
       $('#menuBtnInNavBar').toggleClass('menuBtn-shown')
-      $('#sideNav').toggleClass('shown')
+      $('#sideNav').toggleClass('show')
       // 點擊替換className達到sidebar動畫效果
     }
   },
