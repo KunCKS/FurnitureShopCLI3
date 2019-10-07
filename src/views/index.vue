@@ -16,10 +16,10 @@
 
 <script>
 // 除了後台以外，全部的route都有NavBar、SideBar及Footer，所以將這三個元件放在這邊，另外利用 event bus 來顯示提醒訊息的Alert也建立在這提供index下的子route使用
-import Alert from '../components/alert'
-import sideBar from '../components/sidebar'
-import navBar from '../components/navbar'
-import footerContent from '../components/footer-content'
+import Alert from '../components/Alert'
+import sideBar from '../components/Sidebar'
+import navBar from '../components/Navbar'
+import footerContent from '../components/FooterContent'
 export default {
   components: {
     sideBar,

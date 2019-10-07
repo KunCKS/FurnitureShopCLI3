@@ -13,91 +13,91 @@ export default new Router({
       path: '/',
       redirect: '/home',
       name: 'index',
-      component: () => import('./views/index.vue'),
+      component: () => import('./views/Index.vue'),
       children: [
         {
           path: 'home',
           name: 'Home',
-          component: () => import('./views/home.vue')
+          component: () => import('./views/Home.vue')
         },
         {
           path: 'products',
           name: 'Products',
-          component: () => import('./views/products.vue')
+          component: () => import('./views/Products.vue')
         },
         {
           path: 'products/:category/:series',
           name: 'FilterProducts',
-          component: () => import('./views/products.vue')
+          component: () => import('./views/Products.vue')
         },
         {
           path: 'cart',
           name: 'Cart',
-          component: () => import('./views/cart.vue')
+          component: () => import('./views/Cart.vue')
         },
         {
           path: 'customerorder',
           name: 'CustomerOrder',
-          component: () => import('./views/customer-order.vue')
+          component: () => import('./views/CustomerOrder.vue')
         },
         {
           path: 'customercheckout/:id',
           name: 'CustomerCheckout',
-          component: () => import('./views/customer-checkout.vue')
+          component: () => import('./views/CustomerCheckout.vue')
         },
         {
           path: 'login',
           name: 'Login',
-          component: () => import('./views/login.vue')
+          component: () => import('./views/Login.vue')
         },
         {
           path: 'product/:id',
           name: 'Product',
-          component: () => import('./views/product-page.vue')
+          component: () => import('./views/ProductPage.vue')
         },
         {
           path: 'promotion',
           name: 'Promotion',
-          component: () => import('./views/promotion.vue')
+          component: () => import('./views/Promotion.vue')
         },
         {
           path: 'career',
           name: 'Career',
-          component: () => import('./views/career.vue')
+          component: () => import('./views/Career.vue')
         },
         {
           path: 'customerservice',
           name: 'CustomerService',
-          component: () => import('./views/customer-service.vue')
+          component: () => import('./views/CustomerService.vue')
         },
         {
           path: 'contact',
           name: 'Contact',
-          component: () => import('./views/contact.vue')
+          component: () => import('./views/Contact.vue')
         }
       ]
     },
     {
       name: '管理頁面',
       path: '/admin',
-      component: () => import('./views/dashboard.vue'),
+      component: () => import('./views/Dashboard.vue'),
       children: [
         {
           name: '產品頁面',
           path: 'products',
-          component: () => import('./views/dashboard-products.vue'),
+          component: () => import('./views/DashboardProducts.vue'),
           meta: { requiresAuth: true }
         },
         {
           name: '優惠券頁面',
           path: 'coupons',
-          component: () => import('./views/coupons.vue'),
+          component: () => import('./views/Coupons.vue'),
           meta: { requiresAuth: true }
         },
         {
           name: '訂單頁面',
           path: 'dashboardorders',
-          component: () => import('./views/dashboard-orders.vue'),
+          component: () => import('./views/DashboardOrders.vue'),
           meta: { requiresAuth: true }
         }
       ]

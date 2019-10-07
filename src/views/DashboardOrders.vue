@@ -205,7 +205,7 @@
 </template>
 
 <script>
-import Pagination from '../components/dashboard-pagination'
+import Pagination from '../components/DashboardPagination'
 import $ from 'jquery'
 export default {
   data () {

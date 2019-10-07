@@ -167,10 +167,10 @@
 
 <script>
 // 自訂元件
-import IntroduceCompanySection from '../components/introduce-company-section'
-import ImgWall from '../components/img-wall'
-import NewsOverlay from '../components/news-overlay'
-import HomeProducts from '../components/home-products'
+import IntroduceCompanySection from '../components/IntroduceCompanySection'
+import ImgWall from '../components/ImgWall'
+import NewsOverlay from '../components/NewsOverlay'
+import HomeProducts from '../components/HomeProducts'
 // 外部元件、插件
 import { Carousel, Slide } from 'vue-carousel'
 import $ from 'jquery'

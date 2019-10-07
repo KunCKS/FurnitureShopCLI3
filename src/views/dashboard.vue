@@ -15,9 +15,9 @@
 </template>
 
 <script>
-import Sidebar from '../components/dashboard-sidebar'
-import Navbar from '../components/dashboard-navbar'
-import Alert from '../components/alert'
+import Sidebar from '../components/DashboardSidebar'
+import Navbar from '../components/DashboardNavbar'
+import Alert from '../components/Alert'
 export default {
   components: {
     Navbar,

@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import ProductsHeader from '../components/products-header'
+import ProductsHeader from '../components/ProductsHeader'
 export default {
   data () {
     return {

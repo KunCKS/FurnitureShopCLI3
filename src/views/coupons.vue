@@ -144,7 +144,7 @@
 
 <script>
 import $ from 'jquery'
-import pagination from '../components/pagination'
+import pagination from '../components/Pagination'
 export default {
   data () {
     return {

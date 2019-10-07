@@ -235,7 +235,7 @@
 
 <script>
 import $ from 'jquery'
-import Pagination from '../components/dashboard-pagination'
+import Pagination from '../components/DashboardPagination'
 // 在main.js中引入bootstrap時，雖然有安裝jQuery及propers，但他們只是bootstrap的相依套件而已，並沒有載入到裡面來，
 // 所以這邊要自己引入到元件內＄才有定義
 export default {

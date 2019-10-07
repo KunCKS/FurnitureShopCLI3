@@ -10,8 +10,8 @@
 
 <script>
 // 自訂元件
-import ProductsHeader from '../components/products-header'
-import ProductsList from '../components/products-list'
+import ProductsHeader from '../components/ProductsHeader'
+import ProductsList from '../components/ProductsList'
 
 // 外部插件
 import $ from 'jquery'

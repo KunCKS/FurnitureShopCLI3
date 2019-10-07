@@ -186,7 +186,7 @@
 <script>
 // 上面模板包含了sidebar及產品list，相關CSS樣式寫在productsSideBar.scss及productsCard.scss
 // 自訂元件
-import Pagination from './pagination'
+import Pagination from './Pagination'
 // 外部插件
 import $ from 'jquery'
 export default {
