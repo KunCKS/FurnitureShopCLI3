@@ -1,6 +1,6 @@
 # FurnitureShop 電商網站
 
-> 歡迎您蒞臨，這份作品是以 Vue.js 練習製作販賣傢俱的電商網站（VueCli3+Vuex）
+> 歡迎您蒞臨，這份作品是以 Vue.js 練習製作販賣傢俱的電商網站（VueCli3）
 
 ## Demo
 
